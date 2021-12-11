@@ -1,0 +1,31 @@
+
+canvas{
+    margin: auto;
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    border: solid 3px black;
+}
+
+#audio-btn {
+    position: absolute;
+    top: 5%;
+    left: 66%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    color: black;
+    font-size: 1px;
+    padding: 12px 24px;
+
+    cursor: pointer;
+
+}
+
+
+body{
+    background:url("img/bananaBack.png") ;
+}

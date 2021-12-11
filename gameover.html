@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wild Monkey</title>
+    <link rel="stylesheet" href="CSS/gameover.css" >
+    <link rel="shortcut icon" href="img/Sprite-0007.ico" type="image/xPosition-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+
+    <script defer>
+var points = 0;
+
+
+        //DOM manipulation
+console.log(points)
+
+        document.write("<div class=\"gOver\">\n" +
+            "    <img src=\"imgMenu/image%20(1).png\" alt=\"gameover\">\n" +
+            "<audio id=\"sound\" src=\"http://www.w3schools.com/html/horse.ogg\"></audio>\n" +
+            "<form action='index.html' onclick='btMusic()'>"+
+            "<button class=\"btn\">TRY AGAIN</button>" +
+            "</form>"+
+            "<form action='menu.html' onclick=\'btMusic()\'>"+
+            "    <button id=\"btn-menu\">MENU</button>\n" +
+            "</form>"+
+
+            "\n" +
+            "<input id=\"audio-btn\" type=\"image\" " +
+            "src='imgMenu/soundIcoon.jpg' style='left: 70%'>" +
+            "</input>"+
+
+            "<audio id='myaudio' autoplay >" +
+            "<source src='audio/MusicGameOverBoard.mp3' type='audio/mp3'/>"+
+            "</audio> "
+            +
+            "</div>")
+
+
+    function btMusic(){
+
+        var audio = document.createElement('audio');
+        audio.setAttribute("autoplay","true");
+        audio.innerHTML = "<source src=\"../audio/clickMusic.mp3\" type=\"audio/mp3\">";
+        document.body.appendChild(audio);
+    }
+
+
+        document.getElementById("audio-btn").onclick = function ()
+        {
+            var myaudio = document.getElementById("myaudio");
+
+            if (myaudio.paused === true) {
+                document.getElementById("myaudio").play();
+
+                this.style.backgroundColor = 'yellow';
+                this.style.color = 'orange';
+            }
+            else if (myaudio.paused === false)
+            {
+                document.getElementById("myaudio").pause();
+                this.style.backgroundColor = "orange";
+                this.style.color = "yellow"
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
